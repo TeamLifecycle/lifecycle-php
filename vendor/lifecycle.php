@@ -9,25 +9,24 @@ class Lifecycle {
 	}
 	public function track($event_id, $unique_id) {
 		$headers = array("Content-Type" => "application/json", "lifecycle-api-key" => $this->lifecycle_api_key);
-		$body = array("event_id" => $event_id, "unique_id" => $unique_id);
-		echo $body;
+		$body = json_encode(array("event_id" => $event_id, "unique_id" => $unique_id));
 		$response = Unirest\Request::post("http://localhost:3400/v1/track", $headers, $body);
 
 		$response->code;        // HTTP Status code
 		$response->headers;     // Headers
-		echo $response->body;        // Parsed body
+		$response->body;        // Parsed body
 		$response->raw_body;    // Unparsed body
 		return $response;
 	}
 	public function identify($params) {
 
 		$headers = array("Content-Type" => "application/json", "lifecycle-api-key" => $this->lifecycle_api_key);
-		$body = array("params" => $params);
+		$body = json_encode(array("params" => $params));
 
 		$response = Unirest\Request::post("http://localhost:3400/v1/identify", $headers, $body);
 
-		echo $response->code;        // HTTP Status code
-		echo $response->headers;     // Headers
+		$response->code;        // HTTP Status code
+		$response->headers;     // Headers
 		$response->body;        // Parsed body
 		$response->raw_body;    // Unparsed body
 		return $response;
