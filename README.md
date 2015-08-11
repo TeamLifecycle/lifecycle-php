@@ -9,7 +9,7 @@ To install unirest-php with Composer, just add the following to your `composer.j
 ```json
 {
     "require": {
-        "lifecycle/lifecycle-api"
+        "lifecycle/lifecycle"
     }
 }
 ```
@@ -17,7 +17,7 @@ To install unirest-php with Composer, just add the following to your `composer.j
 or by running the following command:
 
 ```shell
-composer require lifecycle/lifecycle-api
+composer require lifecycle/lifecycle
 ```
 
 Composer installs autoloader at `./vendor/autoloader.php`. to include the library in your script, add:
@@ -28,7 +28,7 @@ require_once 'vendor/autoload.php';
 
 If you use Symfony2, autoloader has to be detected automatically.
 
-*You can see this library on [Packagist](https://packagist.org/packages/lifecycle/lifecycle-api).*
+*You can see this library on [Packagist](https://packagist.org/packages/lifecycle/lifecycle).*
 
 
 ## Usage
@@ -56,7 +56,7 @@ lifecycle::track('$event_id, $unique_id');
 
 ```php
 //Example of params variable to use with identify call
-params = array( "unique_id" => "1234",
+$params = array( "unique_id" => "1234",
         		"first_name" => "Nathan",
         		"last_name" => "Mooney",
     			"email_address" => "someone@lifecycle.io",
