@@ -8,7 +8,7 @@ To install unirest-php with Composer, just add the following to your `composer.j
 
 ```json
 {
-    "require-dev": {
+    "require": {
         "lifecycle/lifecycle-api"
     }
 }
