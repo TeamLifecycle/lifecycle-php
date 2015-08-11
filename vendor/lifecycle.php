@@ -10,10 +10,10 @@ class Lifecycle {
 	public function track($event_id, $unique_id) {
 		$headers = array("Content-Type" => "application/json", "lifecycle-api-key" => $this->lifecycle_api_key);
 		$body = array("event_id" => $event_id, "unique_id" => $unique_id);
-
+		echo $body;
 		$response = Unirest\Request::post("http://localhost:3400/v1/track", $headers, $body);
 
-		echo $response->code;        // HTTP Status code
+		$response->code;        // HTTP Status code
 		$response->headers;     // Headers
 		echo $response->body;        // Parsed body
 		$response->raw_body;    // Unparsed body
