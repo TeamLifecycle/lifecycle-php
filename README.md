@@ -4,14 +4,15 @@
 
 ### Using [Composer](https://getcomposer.org)
 
-To install unirest-php with Composer, just add the following to your `composer.json` file:
+To install lifecycle-php with Composer, just add the following to your `composer.json` file:
 
 ```json
 {
     "require": {
-        "lifecycle/lifecycle"
+          "lifecycle/lifecycle" : "^0.0"
     }
 }
+
 ```
 
 or by running the following command:
@@ -63,9 +64,3 @@ $params = array( "unique_id" => "1234",
         		"phone_number" => "12345678913")
 
 ```
-
-
-
-
-
-
